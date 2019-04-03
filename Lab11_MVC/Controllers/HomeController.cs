@@ -18,7 +18,7 @@ namespace Lab11_MVC.Controllers
         [HttpPost]
         public IActionResult Index( int priceMax, int pointMin )
         {
-            // send to new pages
+            // send to diff page
             return RedirectToAction("SearchResults", new { priceMax, pointMin });
         }
 

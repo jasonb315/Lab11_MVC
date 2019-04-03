@@ -55,7 +55,14 @@ namespace Lab11_MVC.Models
                 wineSelection.Add(wineToAdd);
             }
 
-            return wineSelection;
+            var wineChoice = from w in wineSelection.Distinct()
+                             where w.Points > points && w.Price < price
+                             orderby w.Price
+                             select w;
+
+
+            return (List<Wine>)wineChoice;
+
 
             // bring in data
             // read line by line, exclude header
