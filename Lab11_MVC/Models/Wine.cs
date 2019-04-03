@@ -25,6 +25,7 @@ namespace Lab11_MVC.Models
             List<Wine> wineSelection = new List<Wine>();
 
             string path = "./wine.csv";
+
             var CSVreader = new StreamReader(File.OpenRead(path));
             // skip csv header
             CSVreader.ReadLine();
@@ -60,18 +61,7 @@ namespace Lab11_MVC.Models
                              orderby w.Price
                              select w;
 
-
             return wineChoice.ToList();
-
-
-            // bring in data
-            // read line by line, exclude header
-            // split lines into data sections array
-            // use data sections of arr by index to populate wine class constructor fields
-            // populate winSelection with each instantiated line
-            // return populated list to View calling wine.GetWineList
-
         }
-
     }
 }
