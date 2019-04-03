@@ -61,7 +61,7 @@ namespace Lab11_MVC.Models
                              select w;
 
 
-            return (List<Wine>)wineChoice;
+            return wineChoice.ToList();
 
 
             // bring in data
