@@ -17,5 +17,11 @@ namespace Lab11_MVC.Models
         public string Region_2 { get; set; }
         public string Variety { get; set; }
         public string Winery { get; set; }
+
+        public static List<Wine> GetWineList(int price, int points)
+        {
+
+        }
+
     }
 }
