@@ -20,11 +20,17 @@ namespace Lab11_MVC.Models
         public string Variety { get; set; }
         public string Winery { get; set; }
 
+        /// <summary>
+        ///     Recieves user filter and generated list of qualified wines
+        /// </summary>
+        /// <param name="price">int max price</param>
+        /// <param name="points">int min points</param>
+        /// <returns>List of wines</returns>
         public static List<Wine> GetWineList(int price, int points)
         {
             List<Wine> wineSelection = new List<Wine>();
 
-            string path = "./wine.csv";
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../wwwroot/wine.csv");
 
             var CSVreader = new StreamReader(File.OpenRead(path));
             // skip csv header
