@@ -1,10 +1,11 @@
 ﻿@model IEnumerable<Lab11_MVC.Models.Wine>
 
 @{
-    <link href="~/style/StyleSheet.css" rel="stylesheet" />
+    <link href="~/style/SearchResults.css" rel="stylesheet" />
     <body>
         @foreach (var item in Model) {
         <div>
+            <p>@item.Variety, @item.Country</p>
             <p> @item.Description </p>
             <p> Cost: @item.Price, Score: @item.Points </p>
         </div>

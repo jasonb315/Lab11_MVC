@@ -1,3 +1,17 @@
 ﻿body {
-    background-color: lightblue;
+    background-color: lightcoral;
+    display: flex;
+    align-self: auto;
+    justify-content: center;
+
+}
+
+#formContainer {
+    background-color: white;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-self: auto;
+    justify-content: center;
+    height: 50vh;
 }
