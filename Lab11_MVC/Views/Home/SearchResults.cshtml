@@ -3,6 +3,9 @@
 @{
     <link href="~/style/SearchResults.css" rel="stylesheet" />
     <body>
+
+        <a asp-controller="Home" asp-action="Index">HOME</a>
+
         @foreach (var item in Model) {
         <div>
             <p>@item.Variety, @item.Country</p>
@@ -10,6 +13,7 @@
             <p> Cost: @item.Price, Score: @item.Points </p>
         </div>
         }
+
 
     </body>
 }
